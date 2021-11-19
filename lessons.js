@@ -6,7 +6,7 @@ let lessons = [
         price : 350,
         image: "images/maths.jpeg",
         availablespace: 5,
-        rating: 'fa fa-star'
+        rating: 4
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ let lessons = [
         price : 300,
         image: "images/english.jpeg",
         availablespace: 5,
-        rating: 'fa fa-star'
+        rating: 5
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ let lessons = [
         price : 250,
         image: "images/physics.jpeg",
         availablespace: 5,
-        rating: 'fa fa-star'  
+        rating: 4  
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ let lessons = [
         price : 200,
         image: "images/chemistry.jpeg",
         availablespace: 5,
-        rating: 'fa fa-star'    
+        rating: 3    
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ let lessons = [
         price : 250,
         image: "images/biology.jpeg",
         availablespace: 5,
-        rating: 'fa fa-star'    
+        rating: 3    
     },
     {
         id: 6,
@@ -51,7 +51,7 @@ let lessons = [
         price : 300,
         image: "images/python.jpeg",
         availablespace: 5,
-        rating: 'fa fa-star'    
+        rating: 4    
     },
     {
         id: 7,
@@ -60,7 +60,7 @@ let lessons = [
         price : 100,
         image: "images/economics.jpeg",
         availablespace: 5,
-        rating: 'fa fa-star'   
+        rating: 1   
     },
     {
         id: 8,
@@ -69,7 +69,7 @@ let lessons = [
         price : 150,
         image: "images/music.jpeg",
         availablespace: 5,
-        rating: 'fa fa-star' 
+        rating: 3 
     },
     {
         id: 9,
@@ -78,7 +78,7 @@ let lessons = [
         price : 100,
         image: "images/catering.jpeg",
         availablespace: 5,
-        rating: 'fa fa-star'
+        rating: 2
     },
     {
         id: 10,
@@ -87,6 +87,6 @@ let lessons = [
         price : 350,
         image: "images/android.jpeg",
         availablespace: 5,
-        rating: 'fa fa-star'      
+        rating: 5      
     },
 ]
