@@ -142,7 +142,12 @@
             submitForm(user) {
                 alert('Cheers '+ user.name + ' ,your order has been successfully submitted');  
             },
-            computed: {}
+            computed: {
+                //returns length of the cart items
+                cartItemCount: function() {
+                    return this.cart.length || "";
+                },
+            }
 
         })
     </script>
