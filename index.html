@@ -147,6 +147,62 @@
                 cartItemCount: function() {
                     return this.cart.length || "";
                 },
+                sortedLessons(lessons, sort){
+                    //the comparison that defines the order
+
+                    if(this.sort.sortingMethod == "location" && this.sort.sortingOrder === "ascending" ){
+                    function compare (a, b){
+                        if (a.location > b.location) return 1;
+                        if (a.location < b.location) return -1;
+                        return 0;
+                    }
+                    
+	                }else if(this.sort.sortingMethod == "location" && this.sort.sortingOrder === "descending" ){
+	                    function compare (a, b){
+	                        if (a.location < b.location) return 1;
+	                        if (a.location > b.location) return -1;
+	                        return 0;
+	                    }
+	                }else if(this.sort.sortingMethod === "price" && this.sort.sortingOrder === "ascending" ){
+	                    function compare (a, b){
+	                        if (a.price > b.price) return 1;
+	                        if (a.price < b.price) return -1;
+	                        return 0;
+	                    }
+	                }else if(this.sort.sortingMethod === "price" && this.sort.sortingOrder === "descending" ){
+	                    function compare (a, b){
+	                        if (a.price < b.price) return 1;
+	                        if (a.price > b.price) return -1;
+	                        return 0;
+	                    }
+	                }else if(this.sort.sortingMethod == "subject" && this.sort.sortingOrder === "ascending" ){
+	                    function compare (a, b){
+	                        if (a.subject > b.subject) return 1;
+	                        if (a.subject < b.subject) return -1;
+	                        return 0;
+	                    }
+	                }else if(this.sort.sortingMethod == "subject" && this.sort.sortingOrder === "descending" ){
+	                    function compare (a, b){
+	                        if (a.subject < b.subject) return 1;
+	                        if (a.subject > b.subject) return -1;
+	                        return 0;
+	                    }
+	                }else if(this.sort.sortingMethod == "availablespace" && this.sort.sortingOrder === "ascending" ){
+	                    function compare (a, b){
+	                        if (a.availablespace > b.availablespace) return 1;
+	                        if (a.availablespace < b.availablespace) return -1;
+	                        return 0;
+	                    }
+	                }else if(this.sort.sortingMethod == "availablespace" && this.sort.sortingOrder === "descending" ){
+	                    function compare (a, b){
+	                        if (a.availablespace < b.availablespace) return 1;
+	                        if (a.availablespace > b.availablespace) return -1;
+	                        return 0;
+	                    }
+	                }
+	                    //sort 'productArray' array and return it
+	                    return this.lessons.sort(compare);
+                },
             }
 
         })
