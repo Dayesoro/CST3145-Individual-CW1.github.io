@@ -40,6 +40,44 @@
 						</div>
 						<!-- end of UI to display lesson items -->
 					</div>
+
+
+                    <div v-else>
+                        <!-- UI to show items added to cart -->
+                        <h2 class="text-center mt-5 mb-5">{{cartpage}}</h2>
+                        <div class="container">
+                            <div class="row">
+                                <div v-for="lesson in cart" class="col-md-3 mb-4">
+                                    <div class="card">
+                                        <img class="card-img" v-bind:src="lesson.image" alt="Lesson Image">
+                                        <div class="card-body">
+                                            <h6>Subject: {{lesson.subject}}</h6>
+                                            <h6>Location: {{lesson.location}}</h6>
+                                            <h6>Price: £{{lesson.price}}</h6>
+                                            <button v-on:click="removeFromCart(lesson, cart)" class="btn btn-primary">Remove from Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Start of checkout UI -->
+                            <h2 class="text-center mt-5 mb-5">Checkout</h2>
+                            <form class="mb-5">
+                              <div class="form-row">
+                                <div class="col">
+                                  <input type="text" class="form-control" v-model="user.name" placeholder="Enter Name" required>
+                                </div>
+                                <div class="col">
+                                  <input type="text" class="form-control" v-model="user.phone" placeholder="Phone Number" required>
+                                </div>
+                                <input style="margin-bottom: 50px;" v-on:click="submitForm(user)" v-if="user.name == '' || user.number == '' " class="btn btn-primary" type="submit" value="Place Order" hidden>
+                                <p v-else-if="user.name == parseInt(user.name) " class="bg-danger"> Please input a valid name</p>
+                                <input style="margin-bottom: 50px;" v-on:click="submitForm(user)" v-else class="btn btn-primary" type="submit" value="Place Order"> 
+                              </div>
+                            </form>
+                            <!-- End of checkout UI -->
+                        </div>
+                        <!-- End of UI to show items added to cart -->
+                    </div>
     </div>
     <script>
         let webstore = new Vue({
