@@ -103,8 +103,10 @@
                                         <h6>Available: {{lesson.availablespace - cartCount(lesson)}}</h6>
                                         <h6>Price: £{{lesson.price}}</h6>
                                         <h6>Rating:
-                                            <span v-for="n in lesson.rating">★</span>
-                                            <span v-for="n in 5 - lesson.rating">☆</span>
+                                            <!-- <span v-for="n in lesson.rating">★</span>
+                                            <span v-for="n in 5 - lesson.rating">☆</span> -->
+                                            <span v-for='n in lesson.rating'><i class="fas fa-star"></i></span>
+                                            <span v-for='n in 5 - lesson.rating'><i class="far fa-star"></i></span>
 
                                         </h6>
                                         <button v-on:click="addToCart(lesson)" v-if="canAddToCart(lesson)"
